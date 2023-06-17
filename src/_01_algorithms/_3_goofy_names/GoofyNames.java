@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class GoofyNames {
 	public static void main(String[] args) {
 		String goofyName = "";
-//ASK LATER: number of equal signs for integer and string & for string, if you can only use .equals
+
 		// 1. Ask the user to enter their name
 		String name = JOptionPane.showInputDialog("Enter your name");
 		// 2. Print upper case name to the console using .toUpperCase()
@@ -19,11 +19,11 @@ public class GoofyNames {
 		//    HINT: Use .length() to determine the number of characters in the String.
 		for (int i=0; i< name.length(); i++) {
 			char c = name.charAt(i);
-			if (c%2 ==0) {
-				Character.toUpperCase(c);
+			if (i%2 ==0) {
+				c = Character.toUpperCase(c);
 			}
 			else {
-				Character.toLowerCase(c);
+				c = Character.toLowerCase(c);
 			}
 			goofyName = goofyName + c;
 		}
