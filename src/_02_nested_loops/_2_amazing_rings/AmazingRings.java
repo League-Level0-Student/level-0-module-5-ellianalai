@@ -42,6 +42,7 @@ public class AmazingRings extends PApplet {
     int width = 250;
     int height = 250;
     int x = 150;
+    int x_2 = 900;
     int speed = 20;
     PImage waldo;
 
@@ -61,10 +62,21 @@ public class AmazingRings extends PApplet {
     	background(211,211,211);
     	for (int i = 0; i <20;i++){
     		ellipse(x,250,width-i*20,height-i*20);
+    	
     	  
     	}
+    	for (int w = 0; w <20;w++){
+        	ellipse(x_2,250,width-w*20,height-w*20);
+    	}
     	x+=speed;
-    	if (x>1000) {
+    	if (x>900) {
+    		speed=-speed;
+    	}
+    	else if (x<150) {
+    		speed=-speed;
+    	}
+    	x_2-=speed;
+    	if (x_2>900) {
     		speed=-speed;
     	}
     	else if (x<150) {
