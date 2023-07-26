@@ -52,13 +52,24 @@ public class for_loop_gauntlet {
 			System.out.println("In " + years + ", I was " + i + " years old");
 		}
 		System.out.println("In 2023, I am 14 years old");
-*/
-		for (int i =-1;i<2;i++) {
-			
-			for(int c =0;c<3;c++) {
-				System.out.println(i+1);
-				System.out.print(c+1);
+		
+		eighth for loop (nested loop)
+		for (int i =0; i<3; i++) {
+
+			for (int c = 0; c<3; c++) {
+				
+				System.out.println(i + " " + c);
 			}
+		}
+*/
+		for (int i =0; i<3; i++) {
+			
+			for (int j=1; j<4; j++) {
+				System.out.print(j+i +  " ");
+				
+			}
+			
+			System.out.println();
 		}
 	}
 
