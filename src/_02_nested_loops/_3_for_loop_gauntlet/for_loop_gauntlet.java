@@ -63,18 +63,7 @@ public class for_loop_gauntlet {
 		}
 
 		ninth for loop (3x3 grid)
-		int counter = 0;
-
-		for (int i =0; i<3; i++) {
-
-			for (int j=1; j<4; j++) {
-				counter++;
-				System.out.print(counter + " ");
-
-			}
-			System.out.println();
-
-		}
+		
 		
 		tenth for loop (10x10 grid)
 		int counter = 0;
@@ -100,16 +89,28 @@ public class for_loop_gauntlet {
 			number--;
 			System.out.println(number);
 		}
-*/
-		for (int i =0; i<6; i++) {
-			
-			for (int k=0; k<6;k++) {
-				System.out.print(i);
+
+		String asterisk = "*";
+		for (int i =1; i<=6; i++) {
+			for (int k=0; k<i;k++) {
+				
+				System.out.print(asterisk + " ");
 			}
 			System.out.println();
 		}
+*/		
 		
-		
+
+		for (int i =0; i<7; i+=3) {
+
+			for (int j=1; j<4; j++) {
+				
+				System.out.print(j + i + " ");
+
+			}
+			System.out.println();
+
+		}
 	}
 
 }
