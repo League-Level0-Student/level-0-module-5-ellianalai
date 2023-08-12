@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public class HappyPet {
 	static int happiness = 0;
-	static String pet = JOptionPane.showInputDialog("What pet would you like to buy: Dog, Cat, Fish, or Snake?");
+	static String pet = JOptionPane.showInputDialog("What pet would you like to buy: dog, cat, fish, or snake?");
 	static String name = JOptionPane.showInputDialog("What would you like to name your pet?");
 	// 1. Add the following variable to the next line: static int happinessLevel = 0;
 	// this will be used to store the happiness of your pet
@@ -16,14 +16,34 @@ public class HappyPet {
 			// 4. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
+		while (happiness<=5) {
 			int task = JOptionPane.showOptionDialog(null, "What do you want to do to make your pet happy?", "Pet Happiness", 0, JOptionPane.INFORMATION_MESSAGE, null,
 					new String[] { "Cuddle", "Give food and water", "Give a Bath", "Clean up Poop" }, null);
 			
 			// 6. Use user input to call the appropriate method created in step 5 below.
-			
+			if (task == 0) {
+				cuddle(pet);
+			}
+			else if (task == 1) {
+				food_and_water(pet);
+			}
+			else if (task == 2) {
+				bath(pet);
+			}
+			else if (task == 3) {
+				poop(pet);
+			}
 			// 7. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
-			
+			if (happiness>=5) {
+				JOptionPane.showMessageDialog(null, name + " is very happy and you love " + name + "very much <3");
+				break;
+			}
+			else if (happiness<=-7) {
+				JOptionPane.showMessageDialog(null, name + " dies due to obliviousness, stupidity, and negligence :(");
+				break;
+			}
+		}
 	}
 
 	// 5. Create methods to handle each of your user selections.
