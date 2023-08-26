@@ -40,7 +40,7 @@ public class Skill {
 		else {
 			JOptionPane.showMessageDialog(null, "Move to San Diego");
 		}
-		*/
+		
 		String cars = JOptionPane.showInputDialog("How many cars does your family have?");
 		int c = Integer.parseInt(cars);
 		if (c == 0) {
@@ -53,7 +53,9 @@ public class Skill {
 		if (c> 1) {
 			JOptionPane.showMessageDialog(null, "Your total collection of cars equate to having " + 4*c + " wheels");
 		}
-		
+		*/
+		String school = JOptionPane.showInputDialog("What is the name of your school?");
+		JOptionPane.showMessageDialog(null, school + " is a fantastic school");
 	}
 
 }
